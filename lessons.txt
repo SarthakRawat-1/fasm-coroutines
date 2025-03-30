@@ -1,0 +1,9 @@
+Using the goto statement, we can jump only within procedures not between procedures i.e. can't jump to a different procedure.
+setjmp and longjmp comes to the picture. 
+Functions like setjmp are too high level to be implemented in C, and hence, are written in Assembly which are architecture specific and hence, has different implementations.
+However, we can't do this because of the Stack. The state of the execution is not only the registers but also the current stack. setjmp stores only the stack pointer but stack stays the same (check implementation of setjmp).
+If we have several coroutines, they will share the same satck and override the same stack constantly.
+
+NOTE :- On the standard PC x86 architecture the stack grows toward address zero, meaning that more recent items, deeper in the call chain, are at numerically lower addresses and closer to the heap.
+
+Refer Undefined Behavior section of setjmp man page.

@@ -1,0 +1,28 @@
+# Object files
+*.o
+
+# Executables
+main
+*.exe
+*.out
+
+# FASM temporary files
+*.fas
+
+# Debug files
+*.dSYM/
+
+# Editor/IDE specific files
+.vscode/
+.idea/
+*.swp
+*~
+
+# OS specific files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
